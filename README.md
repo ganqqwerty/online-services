@@ -14,3 +14,7 @@
 
 1. Execute `java -jar online-services-web/target/online-services-web-*.jar`.
 1. You can verify that the application is running by opening the following URL in your browser: _http://localhost:8080/actuator/health_
+
+### Build and Run Frontend
+
+See [UI module's README](online-services-ui/README.md)
