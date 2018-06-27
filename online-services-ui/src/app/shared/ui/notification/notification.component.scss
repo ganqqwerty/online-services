@@ -1,0 +1,47 @@
+@import "../../../../colors";
+.notification {
+  width: 100%;
+  display: flex;
+  .icon {
+    padding: 10px;
+    text-align: center;
+    i {
+      width: 16px;
+      color: $color-white;
+    }
+  }
+  .text {
+    padding: 10px;
+    .line-1 {
+      font-weight: 700;
+    }
+  }
+
+
+  &.info {
+    background-color: $color-light-blue;
+    .icon {
+      background-color: $color-blue;
+    }
+  }
+  &.warning {
+    background-color: $color-yellow;
+    .icon {
+      background-color: $color-orange;
+    }
+  }
+  &.error {
+    background-color: $color-light-red;
+    .icon {
+      background-color: $color-red;
+    }
+  }
+  &.success {
+    background-color: $color-light-green;
+    .icon {
+      background-color: $color-green;
+    }
+  }
+
+}
+
