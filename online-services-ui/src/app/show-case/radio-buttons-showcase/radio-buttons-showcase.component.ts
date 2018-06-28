@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RadioButtonItem } from '../../shared/ui/radio-buttons/radio-button-item.model';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'os-radio-buttons-showcase',
@@ -27,8 +28,10 @@ export class RadioButtonsShowcaseComponent implements OnInit {
     }
   ];
 
+  formControl = new FormControl();
 
   ngOnInit() {
+    this.formControl.setValidators(Validators.required);
   }
 
 }

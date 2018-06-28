@@ -5,7 +5,7 @@
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config(
         $font-family: 'Open Sans, "Open Sans", Helvetica',
-        $headline: mat-typography-level(32px, 48px, 700),
+        $headline: mat-typography-level(22px, 33px, 700),
         $body-1: mat-typography-level(16px, 24px, 500)
 );
 

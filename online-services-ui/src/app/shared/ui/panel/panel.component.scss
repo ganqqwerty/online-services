@@ -1,0 +1,27 @@
+@import "../../../../colors";
+.panel {
+  background-color: $color-light-grey;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+  padding: 15px 20px 10px;
+  margin: 0.25em;
+  ::ng-deep .panel-header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
+.arrow-container {
+  width: 100%;
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 18px solid $color-grey;
+    margin: auto;
+    &.related {
+      border-top-color: $color-blue;
+    }
+  }
+
+}

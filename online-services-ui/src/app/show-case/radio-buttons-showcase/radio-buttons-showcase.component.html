@@ -1,5 +1,21 @@
-<div class="mat-h1">Vertical</div>
-<os-radio-buttons [items]="values"></os-radio-buttons>
+<os-panel>
+  <div class="panel-header">Vertical</div>
+  <os-radio-buttons class="body" [items]="values"></os-radio-buttons>
+</os-panel>
 
-<div class="mat-h1">Horizontal</div>
-<os-radio-buttons [items]="values" [horizontal]="true"></os-radio-buttons>
+<os-panel [hasRelatedPanel]="true">
+  <div class="panel-header">Horizontal</div>
+  <os-radio-buttons class="body" [items]="values" [horizontal]="true"></os-radio-buttons>
+</os-panel>
+
+<os-panel [isLastPanel]="true">
+  <div class="panel-header">Reactive Forms Support</div>
+  <os-radio-buttons [items]="values" [formControl]="formControl"></os-radio-buttons>
+
+  <p class="mat-body">Form Control Value: <em>{{ formControl.value }}</em></p>
+
+</os-panel>
+
+
+
+
