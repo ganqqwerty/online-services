@@ -3,10 +3,14 @@ mat-radio-group {
   flex-direction: column;
   &.horizontal {
     flex-direction: row;
+    flex-wrap: wrap;
     mat-radio-button {
       &:not(:last-of-type) {
-        margin-right: 5px;
+        margin: 0 10px 10px 0;
       }
     }
+  }
+  &:not(.horizontal) mat-radio-button:not(:last-of-type) {
+    margin: 0 10px 10px 0;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AbstractControl } from '@angular/forms';
+import { AbstractControl, FormControl } from '@angular/forms';
 import { RadioButtonItem } from './radio-button-item.model';
 import { MatRadioChange } from '@angular/material';
 
@@ -10,7 +10,7 @@ import { MatRadioChange } from '@angular/material';
 })
 export class RadioButtonsComponent implements OnInit {
 
-  @Input() formControl: AbstractControl;
+  @Input() formControl: AbstractControl = new FormControl();
   @Input() items: Array<RadioButtonItem>;
   @Input() horizontal = false;
   @Output() change = new EventEmitter<string>();
