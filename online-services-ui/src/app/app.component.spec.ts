@@ -47,8 +47,6 @@ describe('AppComponent', () => {
       .toEqual('app');
   }));
 
-
-
   it('navigate to "" redirects you to default component', fakeAsync(() => {
     let getDefaultRoutePath = () => showCaseRoutes[0].children.find(route => route.path == '**').redirectTo;
 
