@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "os",
       "schematics": {},
       "architect": {
         "build": {
@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/os-theme.scss",
+              "src/os-typography.scss"
             ],
             "scripts": []
           },
@@ -72,7 +74,9 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/os-theme.scss",
+              "src/os-typography.scss"
             ],
             "scripts": [],
             "assets": [
@@ -123,5 +127,14 @@
       }
     }
   },
-  "defaultProject": "online-services-ui"
+  "defaultProject": "online-services-ui",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "os",
+      "styleext": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "os"
+    }
+  }
 }
