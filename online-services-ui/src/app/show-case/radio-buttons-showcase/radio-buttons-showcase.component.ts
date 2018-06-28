@@ -27,7 +27,6 @@ export class RadioButtonsShowcaseComponent implements OnInit {
     }
   ];
 
-  constructor() { }
 
   ngOnInit() {
   }

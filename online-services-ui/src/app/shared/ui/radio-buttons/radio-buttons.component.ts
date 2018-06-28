@@ -8,17 +8,12 @@ import { MatRadioChange } from '@angular/material';
   templateUrl: './radio-buttons.component.html',
   styleUrls: ['./radio-buttons.component.scss']
 })
-export class RadioButtonsComponent implements OnInit {
+export class RadioButtonsComponent {
 
   @Input() formControl: AbstractControl = new FormControl();
   @Input() items: Array<RadioButtonItem>;
   @Input() horizontal = false;
   @Output() change = new EventEmitter<string>();
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   valueChanged(radioChange: MatRadioChange) {
     this.change.emit(radioChange.value);
