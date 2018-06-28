@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-export const appRoutes: Routes = [
+const appRoutes: Routes = [
   {
     path: 'show-case',
     loadChildren: './show-case/show-case.module#ShowCaseModule'
