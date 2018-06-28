@@ -7,7 +7,6 @@ import { fakeAsync } from '@angular/core/testing';
 import { tick } from '@angular/core/testing';
 import { appRoutes } from './app-routing.module';
 import { ShowCaseRoutingModule } from './show-case/show-case-routing.module';
-import { routes as showCaseRoutes } from './show-case/show-case-routing.module';
 import { ShowCaseModule } from './show-case/show-case.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
