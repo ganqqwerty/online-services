@@ -45,13 +45,4 @@ describe('AppComponent', () => {
     expect(app.title)
       .toEqual('app');
   }));
-
-  it('navigate to "" redirects you to default component', fakeAsync(() => {
-    let getDefaultRoutePath = () => showCaseRoutes[0].children.find(route => route.path == '**').redirectTo;
-
-    router.navigate(['']);
-    tick();
-    expect(location.path())
-      .toBe('/' + getDefaultRoutePath());
-  }));
 });
