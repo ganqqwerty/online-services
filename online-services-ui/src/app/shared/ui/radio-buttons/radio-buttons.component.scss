@@ -1,0 +1,12 @@
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+  &.horizontal {
+    flex-direction: row;
+    mat-radio-button {
+      &:not(:last-of-type) {
+        margin-right: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<mat-radio-group class="radio-group"
+                 [class.horizontal]="horizontal"
+                 (change)="valueChanged($event)"
+                 [attr.formControl]="formControl">
+
+  <mat-radio-button class="radio-button"
+                    [disableRipple]="true"
+                    *ngFor="let item of items"
+                    [value]="item.value">
+    {{item.label}}
+  </mat-radio-button>
+
+</mat-radio-group>
