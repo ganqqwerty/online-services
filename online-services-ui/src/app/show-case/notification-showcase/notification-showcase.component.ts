@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationShowcaseComponent implements OnInit {
 
+  open = {
+    success: true,
+    error: true,
+    warning: true,
+    info: true
+  };
+
   constructor() { }
 
   ngOnInit() {

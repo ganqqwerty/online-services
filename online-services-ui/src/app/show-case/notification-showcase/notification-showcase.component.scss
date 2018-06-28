@@ -1,3 +1,37 @@
 os-notification {
   margin: 2em;
 }
+
+/deep/ .showcase-animation.closed .notification {
+  animation: vanish 0.5s ease-out;
+  opacity: 0;
+}
+/deep/ .showcase-animation.open .notification {
+  animation: appear 0.5s ease-out;
+  opacity: 1;
+}
+.showcase-animation {
+  cursor: pointer;
+}
+
+@keyframes appear {
+  0% {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes vanish {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -50px);
+    opacity: 0;
+  }
+}

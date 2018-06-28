@@ -1,7 +1,20 @@
-<os-notification [type]="'success'" [message]="'This is a success notification'" [additionalText]="'This is additional text'"></os-notification>
-
-<os-notification [type]="'error'" [message]="'This is an error notification'"></os-notification>
-
-<os-notification [type]="'warning'" [message]="'This is a warning notification'" [additionalText]="'This is additional text'"></os-notification>
-
-<os-notification [type]="'info'" [message]="'This is an info notification'"></os-notification>
+<div class="showcase-animation" (click)="open.success = !open.success" [class.open]="open.success"
+     [class.closed]="!open.success">
+  <os-notification [type]="'success'" [message]="'This is a success notification'"
+                   [additionalText]="'This is additional text'"></os-notification>
+</div>
+<div class="showcase-animation" (click)="open.error = !open.error" [class.open]="open.error"
+     [class.closed]="!open.error">
+  <os-notification [type]="'error'"
+                   [message]="'This is an error notification'"></os-notification>
+</div>
+<div class="showcase-animation" (click)="open.warning = !open.warning" [class.open]="open.warning"
+     [class.closed]="!open.warning">
+  <os-notification [type]="'warning'" [message]="'This is a warning notification'"
+                   [additionalText]="'This is additional text'"></os-notification>
+</div>
+<div class="showcase-animation" (click)="open.info = !open.info" [class.open]="open.info"
+     [class.closed]="!open.info">
+  <os-notification [type]="'info'"
+                   [message]="'This is an info notification'"></os-notification>
+</div>
