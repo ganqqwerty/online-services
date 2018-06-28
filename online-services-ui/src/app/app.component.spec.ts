@@ -37,8 +37,7 @@ describe('AppComponent', () => {
 
   it('should create the app', async(() => {
     const app = fixture.debugElement.componentInstance;
-    expect(app)
-      .toBeTruthy();
+    expect(app).toBeTruthy();
   }));
 
   it(`should have as title 'app'`, async(() => {
@@ -55,5 +54,4 @@ describe('AppComponent', () => {
     expect(location.path())
       .toBe('/' + getDefaultRoutePath());
   }));
-
 });
