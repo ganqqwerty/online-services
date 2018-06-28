@@ -15,7 +15,7 @@ import { InfiniteScrollShowcaseComponent } from './infinite-scroll-showcase/infi
 import { ActionMenuShowcaseComponent } from './action-menu-showcase/action-menu-showcase.component';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: SideNavigationComponent,

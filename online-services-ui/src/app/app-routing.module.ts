@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {
     path: 'show-case',
     loadChildren: './show-case/show-case.module#ShowCaseModule'
@@ -15,8 +15,8 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(
-        appRoutes,
-        {enableTracing: false}
+      appRoutes,
+      { enableTracing: false }
     )
   ],
   exports: [
