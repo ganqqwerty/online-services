@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RadioButtonsComponent } from './radio-buttons.component';
 import { MatRadioChange, MatRadioModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('RadioButtonsComponent', () => {
   let component: RadioButtonsComponent;
@@ -9,10 +10,13 @@ describe('RadioButtonsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RadioButtonsComponent],
-      imports: [MatRadioModule]
+      declarations: [RadioButtonsComponent],
+      imports: [
+        MatRadioModule,
+        ReactiveFormsModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -25,6 +29,6 @@ describe('RadioButtonsComponent', () => {
     component.change.subscribe((value) => {
       expect(value).toBe('test-value');
     });
-    component.valueChanged(<MatRadioChange> {source: {}, value: 'test-value'});
+    component.valueChanged(<MatRadioChange> { source: {}, value: 'test-value' });
   });
 });
