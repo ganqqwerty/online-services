@@ -3,8 +3,6 @@ import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { fakeAsync } from '@angular/core/testing';
-import { tick } from '@angular/core/testing';
 import { appRoutes } from './app-routing.module';
 import { ShowCaseRoutingModule } from './show-case/show-case-routing.module';
 import { ShowCaseModule } from './show-case/show-case.module';
@@ -36,7 +34,8 @@ describe('AppComponent', () => {
 
   it('should create the app', async(() => {
     const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app)
+      .toBeTruthy();
   }));
 
   it(`should have as title 'app'`, async(() => {
