@@ -4,22 +4,26 @@ import { NotificationComponent } from './notification/notification.component';
 import { RadioButtonsComponent } from './radio-buttons/radio-buttons.component';
 import { MatRadioModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { DateInputComponent } from './date-input/date-input.component';
+import { AngularMaterialModule } from './angular-material.module';
 
 @NgModule({
   declarations: [
     NotificationComponent,
-    RadioButtonsComponent
+    RadioButtonsComponent,
+    DateInputComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MatRadioModule
+    MatRadioModule,
+    AngularMaterialModule
   ],
   entryComponents: [],
   exports: [
     NotificationComponent,
-    RadioButtonsComponent
+    RadioButtonsComponent,
+    DateInputComponent
   ],
   providers: []
 })

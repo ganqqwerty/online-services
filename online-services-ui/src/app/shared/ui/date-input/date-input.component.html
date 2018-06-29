@@ -1,0 +1,16 @@
+<mat-label><b>In welechem Zeitraum waren Sie abwesend?</b></mat-label>
+
+<mat-form-field color="accent" >
+  <mat-label>From</mat-label>
+  <input matInput [matDatepicker]="fromDatePicker">
+  <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+  <mat-datepicker #fromDatePicker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field color="accent">
+  <mat-label>To</mat-label>
+  <input matInput [matDatepicker]="toDatePicker">
+  <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+  <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
+</mat-form-field>
+
