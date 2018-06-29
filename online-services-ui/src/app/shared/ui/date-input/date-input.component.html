@@ -1,16 +1,35 @@
-<mat-label><b>In welechem Zeitraum waren Sie abwesend?</b></mat-label>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-card>
+  <mat-card-header>{{message}}</mat-card-header>
 
-<mat-form-field color="accent" >
-  <mat-label>From</mat-label>
-  <input matInput [matDatepicker]="fromDatePicker">
-  <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
-  <mat-datepicker #fromDatePicker></mat-datepicker>
-</mat-form-field>
+  <mat-card-content>
+    <mat-form-field color="accent">
+      <mat-label>From</mat-label>
+      <input
+        matInput
+        [formControl]="fromDateControl"
+        [matDatepicker]="fromDatePicker"
+        (dateInput)="updateFromDate($event)">
+      <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #fromDatePicker></mat-datepicker>
+      <mat-error *ngIf="fromDateControl.hasError('required')">
+        <mat-label><mat-icon>error</mat-icon> From date is required</mat-label>
+      </mat-error>
+    </mat-form-field>
 
-<mat-form-field color="accent">
-  <mat-label>To</mat-label>
-  <input matInput [matDatepicker]="toDatePicker">
-  <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
-  <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
-</mat-form-field>
+    <mat-form-field color="accent">
+      <mat-label>To</mat-label>
+      <input
+        matInput
+        [formControl]="toDateControl"
+        [matDatepicker]="toDatePicker"
+        (dateInput)="updateToDate($event)">
+      <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
+      <mat-error *ngIf="toDateControl.hasError('required')">
+        <mat-icon>error</mat-icon> To date is required
+      </mat-error>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
 
