@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'os-date-input-showcase',
-  templateUrl: './date-input-showcase.component.html',
-  styleUrls: ['./date-input-showcase.component.scss']
+  templateUrl: './date-input-showcase.component.html'
 })
-export class DateInputShowcaseComponent implements OnInit {
+export class DateInputShowcaseComponent {
+  fromDate:Date ;
+  toDate:Date ;
 
-  constructor() { }
-
-  ngOnInit() {
+  updateFromDate(event) {
+    this.fromDate = event;
   }
 
+  updateToDate(event) {
+    this.toDate = event;
+  }
 }

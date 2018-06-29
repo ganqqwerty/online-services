@@ -1,1 +1,11 @@
-<os-date-input></os-date-input>
+<os-date-input
+  [message] = "'In welechem Zeitraum waren Sie abwesend?'"
+  (fromDate) = "updateFromDate($event)"
+  (toDate) = "updateToDate($event)">
+</os-date-input>
+
+<br>
+<div>To date : {{toDate}}</div>
+<br>
+<div>From date : {{fromDate}}</div>
+

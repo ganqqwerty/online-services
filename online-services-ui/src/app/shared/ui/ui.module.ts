@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotificationComponent } from './notification/notification.component';
 import { RadioButtonsComponent } from './radio-buttons/radio-buttons.component';
-import { MatRadioModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DateInputComponent } from './date-input/date-input.component';
 import { AngularMaterialModule } from './angular-material.module';
@@ -16,7 +15,6 @@ import { AngularMaterialModule } from './angular-material.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    MatRadioModule,
     AngularMaterialModule
   ],
   entryComponents: [],
