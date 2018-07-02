@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PanelComponent implements OnInit {
 
-  @Input() hasRelatedPanel: boolean;
-  @Input() isLastPanel: boolean;
+  @Input() isRelatedPanel: boolean;
+  @Input() isFirstPanel: boolean;
 
   constructor() { }
 

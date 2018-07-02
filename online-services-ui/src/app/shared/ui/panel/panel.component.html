@@ -1,7 +1,7 @@
+<div class="arrow-container" *ngIf="!isFirstPanel">
+  <div class="arrow-down" [class.related]="isRelatedPanel"></div>
+</div>
 <div class="panel mat-body">
   <ng-content></ng-content>
-</div>
-<div class="arrow-container" *ngIf="!isLastPanel">
-  <div class="arrow-down" [class.related]="hasRelatedPanel"></div>
 </div>
 
