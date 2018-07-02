@@ -1,14 +1,16 @@
-import {AppPage} from './app.po';
+import { AppPage } from './app.po';
 
 describe('workspace-project App', () => {
   let page: AppPage;
+  const DEFAULT_URL = '/show-case/text-input';
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should redirect to default page', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+
+    expect(page.getCurrentUrl()).toContain(DEFAULT_URL);
   });
 });
