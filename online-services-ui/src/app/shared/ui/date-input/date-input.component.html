@@ -13,12 +13,12 @@
       <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
       <mat-datepicker #fromDatePicker></mat-datepicker>
       <mat-error *ngIf="fromDateControl.hasError('required')">
-        <mat-label><mat-icon>error</mat-icon> From date is required</mat-label>
+        <mat-label><mat-icon>error</mat-icon>{{fromDateRequiredMsgLabel}}</mat-label>
       </mat-error>
     </mat-form-field>
 
     <mat-form-field color="accent">
-      <mat-label>{{fromLabel}}</mat-label>
+      <mat-label>{{toLabel}}</mat-label>
       <input
         matInput
         [formControl]="toDateControl"
@@ -27,7 +27,7 @@
       <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
       <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
       <mat-error *ngIf="toDateControl.hasError('required')">
-        <mat-icon>error</mat-icon> To date is required
+        <mat-icon>error</mat-icon>{{toDateRequiredMsgLabel}}
       </mat-error>
     </mat-form-field>
   </mat-card-content>
