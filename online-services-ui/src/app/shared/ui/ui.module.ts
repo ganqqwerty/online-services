@@ -7,7 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PanelComponent } from './panel/panel.component';
 import { PanelGroupComponent } from './panel-group/panel-group.component';
 
-
 @NgModule({
   declarations: [
     NotificationComponent,
