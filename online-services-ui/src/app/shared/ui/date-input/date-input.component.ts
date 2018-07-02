@@ -8,13 +8,13 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./date-input.component.scss']
 })
 export class DateInputComponent {
-  @Input('fromLabel') toLabel: string = 'From';
-  @Input('toLabel') fromLabel: string = 'To';
-  @Input('fromDateRequiredMsgLabel') fromDateRequiredMsgLabel: string = 'From date is required';
-  @Input('toDateRequiredMsgLabel') toDateRequiredMsg: string = 'To date is required';
-  @Input('message') message: string;
-  @Output('fromDate') fromDate = new EventEmitter<Date>();
-  @Output('toDate') toDate = new EventEmitter<Date>();
+  @Input() toLabel = 'From';
+  @Input() fromLabel = 'To';
+  @Input() fromDateRequiredMsg = 'From date is required';
+  @Input() toDateRequiredMsg = 'To date is required';
+  @Input() message: string;
+  @Output() fromDate = new EventEmitter<Date>();
+  @Output() toDate = new EventEmitter<Date>();
 
   fromDateControl = new FormControl('', [ Validators.required ]);
   toDateControl = new FormControl('', [ Validators.required ]);
