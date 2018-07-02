@@ -32,22 +32,4 @@ describe('DateInputComponent', () => {
     expect(component)
       .toBeTruthy();
   });
-
-  it('should updateFromDate emit a date', () => {
-    component.fromDate.subscribe((value) => {
-      expect(value)
-        .toBe(DATE);
-    });
-
-    component.updateFromDate(createEvent(DATE));
-  });
-
-  it('should updateToDate emit a date', () => {
-    component.toDate.subscribe((value) => {
-      expect(value)
-        .toBe(DATE);
-    });
-
-    component.updateToDate(createEvent(DATE));
-  });
 });
