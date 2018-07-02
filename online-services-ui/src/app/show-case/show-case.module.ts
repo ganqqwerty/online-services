@@ -13,7 +13,12 @@ import { ActionMenuShowcaseComponent } from './action-menu-showcase/action-menu-
 import { InfiniteScrollShowcaseComponent } from './infinite-scroll-showcase/infinite-scroll-showcase.component';
 import { SideNavigationWizardShowcaseComponent } from './side-navigation-wizard-showcase/side-navigation-wizard-showcase.component';
 import { SideNavigationOverviewShowcaseComponent } from './side-navigation-overview-showcase/side-navigation-overview-showcase.component';
-import { MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatListModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 import { ShowCaseRoutingModule } from './show-case-routing.module';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
 import { UiModule } from '../shared/ui/ui.module';
@@ -38,6 +43,7 @@ import { UiModule } from '../shared/ui/ui.module';
   imports: [
     CommonModule,
     MatListModule,
+    MatButtonModule,
     MatSidenavModule,
     ShowCaseRoutingModule,
     MatToolbarModule,

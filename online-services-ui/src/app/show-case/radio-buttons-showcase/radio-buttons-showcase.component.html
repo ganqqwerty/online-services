@@ -1,17 +1,25 @@
-<os-panel [isFirstPanel]="true">
-  <div class="panel-title">Vertical</div>
-  <os-radio-buttons class="body" [items]="values"></os-radio-buttons>
-</os-panel>
+<os-panel-group>
+  <ng-container class="content">
+    <os-panel [isFirstPanel]="true">
+      <div class="panel-title">Vertical</div>
+      <os-radio-buttons [items]="values"></os-radio-buttons>
 
-<os-panel [isRelatedPanel]="true">
-  <div class="panel-title">Horizontal</div>
-  <os-radio-buttons class="body" [items]="values" [horizontal]="true"></os-radio-buttons>
-</os-panel>
+      <div class="panel-divider"></div>
 
-<os-panel>
-  <div class="panel-title">Reactive Forms Support</div>
-  <os-radio-buttons [items]="values" [formControl]="formControl"></os-radio-buttons>
+      <div class="panel-title">Horizontal</div>
+      <os-radio-buttons [items]="values" [horizontal]="true"></os-radio-buttons>
+    </os-panel>
 
-  <p class="mat-body">Form Control Value: <em>{{ formControl.value }}</em></p>
+    <os-panel>
+      <div class="panel-title">Reactive Forms Support</div>
+      <os-radio-buttons [items]="values" [formControl]="formControl"></os-radio-buttons>
 
-</os-panel>
+      <p class="mat-body">Form Control Value: <em>{{ formControl.value }}</em></p>
+
+    </os-panel>
+  </ng-container>
+  <div class="footer">
+    <button mat-stroked-button>Test</button>
+  </div>
+
+</os-panel-group>
