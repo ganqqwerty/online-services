@@ -9,10 +9,11 @@
         matInput
         [formControl]="fromDateControl"
         [matDatepicker]="fromDatePicker"
-        (dateInput)="updateFromDate($event)">
+        (dateInput)="updateFromDate($event)"
+        id="fromDateInput">
       <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
       <mat-datepicker #fromDatePicker></mat-datepicker>
-      <mat-error *ngIf="fromDateControl.hasError('required')">
+      <mat-error *ngIf="fromDateControl.hasError('required')" id="fromDateError">
         <mat-label><mat-icon>error</mat-icon>{{fromDateRequiredMsg}}</mat-label>
       </mat-error>
     </mat-form-field>
@@ -23,10 +24,11 @@
         matInput
         [formControl]="toDateControl"
         [matDatepicker]="toDatePicker"
-        (dateInput)="updateToDate($event)">
+        (dateInput)="updateToDate($event)"
+        id="toDateInput">
       <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
       <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
-      <mat-error *ngIf="toDateControl.hasError('required')">
+      <mat-error *ngIf="toDateControl.hasError('required')" id="toDateError">
         <mat-icon>error</mat-icon>{{toDateRequiredMsg}}
       </mat-error>
     </mat-form-field>
