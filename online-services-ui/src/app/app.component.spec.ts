@@ -3,7 +3,6 @@ import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { appRoutes } from './app-routing.module';
 import { ShowCaseRoutingModule } from './show-case/show-case-routing.module';
 import { ShowCaseModule } from './show-case/show-case.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,7 +16,7 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule.withRoutes(appRoutes),
+        RouterTestingModule,
         ShowCaseRoutingModule,
         ShowCaseModule,
         BrowserAnimationsModule],
