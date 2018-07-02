@@ -5,10 +5,14 @@ import { DateInputComponent } from './date-input.component';
 import { AngularMaterialModule } from '../angular-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerInputEvent, MatDatepickerInput } from '@angular/material';
 
 describe('DateInputComponent', () => {
   let component: DateInputComponent;
   let fixture: ComponentFixture<DateInputComponent>;
+  const DATE = new Date('17-06-1981');
+
+  const createEvent = (date) => new MatDatepickerInputEvent<Date>({} as MatDatepickerInput<Date>, {} as HTMLElement).value = date;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -29,4 +33,21 @@ describe('DateInputComponent', () => {
       .toBeTruthy();
   });
 
+  it('should updateFromDate emit a date', () => {
+    component.fromDate.subscribe((value) => {
+      expect(value)
+        .toBe(DATE);
+    });
+
+    component.updateFromDate(createEvent(DATE));
+  });
+
+  it('should updateToDate emit a date', () => {
+    component.toDate.subscribe((value) => {
+      expect(value)
+        .toBe(DATE);
+    });
+
+    component.updateToDate(createEvent(DATE));
+  });
 });
