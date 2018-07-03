@@ -12,4 +12,7 @@ export class ButtonShowcaseComponent implements OnInit {
   ngOnInit() {
   }
 
+  buttonClicked(type: string) {
+    alert(`${type} button clicked!`);
+  }
 }
