@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotificationComponent } from './notification/notification.component';
+import { RadioButtonsComponent } from './radio-buttons/radio-buttons.component';
+import { MatRadioModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    NotificationComponent
+    NotificationComponent,
+    RadioButtonsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    MatRadioModule
   ],
   entryComponents: [],
   exports: [
-    NotificationComponent
+    NotificationComponent,
+    RadioButtonsComponent
   ],
   providers: []
 })
