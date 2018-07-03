@@ -12,7 +12,6 @@ export class DateInputComponent {
   @Input() fromLabel = 'To';
   @Input() fromDateRequiredMsg = 'From date is required';
   @Input() toDateRequiredMsg = 'To date is required';
-  @Input() message: string;
   @Output() fromDate = new EventEmitter<Date>();
   @Output() toDate = new EventEmitter<Date>();
 

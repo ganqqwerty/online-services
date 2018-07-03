@@ -6,7 +6,6 @@ import {
   MatFormFieldModule,
   MatNativeDateModule,
   MatInputModule,
-  MatCardModule,
   MatRadioModule,
   MatIconModule
 } from '@angular/material';
@@ -28,7 +27,6 @@ import {
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    MatCardModule,
     MatRadioModule,
     MatIconModule
   ],

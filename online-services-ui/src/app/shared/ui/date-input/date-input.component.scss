@@ -1,20 +1,15 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-.mat-card-header {
-  font-weight: bold;
-}
-
-.mat-card-content {
-  .mat-form-field {
-    padding: 30px;
-    .mat-error{
-      .os-notification{
-        .mat-typography {
-          font: 500 9px/24px Open Sans, "Open Sans", Helvetica;
-        }
+.mat-form-field {
+  padding: 30px;
+  .mat-error {
+    .os-notification {
+      .mat-typography {
+        font: 500 9px/24px Open Sans, "Open Sans", Helvetica;
       }
     }
   }
 }
+
 
 

@@ -1,36 +1,35 @@
-<mat-card>
-  <mat-card-header>{{message}}</mat-card-header>
+<mat-form-field color="accent">
+  <mat-label>{{fromLabel}}</mat-label>
+  <input
+    matInput
+    [formControl]="fromDateControl"
+    [matDatepicker]="fromDatePicker"
+    (dateInput)="updateFromDate($event)"
+    id="fromDateInput">
+  <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+  <mat-datepicker #fromDatePicker></mat-datepicker>
+  <mat-error *ngIf="fromDateControl.hasError('required')" id="fromDateError">
+    <mat-label>
+      <mat-icon fontSet="fa" fontIcon="fa-exclamation-circle"></mat-icon>
+      {{fromDateRequiredMsg}}
+    </mat-label>
+  </mat-error>
+</mat-form-field>
 
-  <mat-card-content>
-    <mat-form-field color="accent">
-      <mat-label>{{fromLabel}}</mat-label>
-      <input
-        matInput
-        [formControl]="fromDateControl"
-        [matDatepicker]="fromDatePicker"
-        (dateInput)="updateFromDate($event)"
-        id="fromDateInput">
-      <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
-      <mat-datepicker #fromDatePicker></mat-datepicker>
-      <mat-error *ngIf="fromDateControl.hasError('required')" id="fromDateError">
-        <mat-label><mat-icon fontSet="fa" fontIcon="fa-exclamation-circle"></mat-icon> {{fromDateRequiredMsg}}</mat-label>
-      </mat-error>
-    </mat-form-field>
+<mat-form-field color="accent">
+  <mat-label>{{toLabel}}</mat-label>
+  <input
+    matInput
+    [formControl]="toDateControl"
+    [matDatepicker]="toDatePicker"
+    (dateInput)="updateToDate($event)"
+    id="toDateInput">
+  <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+  <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
+  <mat-error *ngIf="toDateControl.hasError('required')" id="toDateError">
+    <mat-icon fontSet="fa" fontIcon="fa-exclamation-circle"></mat-icon>
+    {{toDateRequiredMsg}}
+  </mat-error>
+</mat-form-field>
 
-    <mat-form-field color="accent">
-      <mat-label>{{toLabel}}</mat-label>
-      <input
-        matInput
-        [formControl]="toDateControl"
-        [matDatepicker]="toDatePicker"
-        (dateInput)="updateToDate($event)"
-        id="toDateInput">
-      <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
-      <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
-      <mat-error *ngIf="toDateControl.hasError('required')" id="toDateError">
-        <mat-icon fontSet="fa" fontIcon="fa-exclamation-circle"></mat-icon> {{toDateRequiredMsg}}
-      </mat-error>
-    </mat-form-field>
-  </mat-card-content>
-</mat-card>
 
