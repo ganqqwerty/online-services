@@ -5,19 +5,24 @@
 ### Prerequisites
 
 * JDK 1.8 or later
+* node.js 10.5.x
+* npm 6.1.x
 
-### Build Backend
+### Build
 
 1. Execute `./mvnw clean install`.
 
-### Run Backend
+#### Build without tests
+
+* To skip unit tests, execute `./mvnw clean install -DskipTests`.
+* To skip integration and UI E2E tests, execute `./mvnw clean install -DskipITs`.
+* To skip all tests, execute `./mvnw clean install -DskipTests -DskipITs`.
+
+### Run
 
 1. Execute `java -jar online-services-web/target/online-services-web-*.jar`.
-1. You can verify that the application is running by opening the following URL in your browser: _http://localhost:8080/actuator/health_
+1. Verify that the application is running by visiting the following URL: _http://localhost:8080_.
 
-### Build and Run Frontend
-
-See [UI module's README](online-services-ui/README.md)
 
 
 ## Development Conventions
