@@ -18,6 +18,7 @@
     }
     &:disabled {
       color: $color-medium-grey;
+      cursor: default;
     }
   }
 
@@ -31,6 +32,7 @@
     }
     &:disabled {
       color: $color-medium-grey;
+      cursor: default;
     }
   }
 
@@ -46,6 +48,7 @@
     &:disabled {
       background-color: $color-super-light-blue;
       border-color: $color-super-light-blue;
+      cursor: default;
     }
   }
 
@@ -59,6 +62,7 @@
     }
     &:disabled {
       color: $color-medium-grey;
+      cursor: default;
     }
   }
 
