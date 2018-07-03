@@ -18,3 +18,15 @@
 ### Build and Run Frontend
 
 See [UI module's README](online-services-ui/README.md)
+
+
+## Development Conventions
+
+### Formatting
+
+Formatting is defined by `.editorconfig` file. 
+
+To apply this formatting automatically by IntelliJ IDEA, you need to do the following:
+
+1. Install [EditorConfig plugin](https://plugins.jetbrains.com/plugin/7294-editorconfig)
+1. Enable EditorConfig support on the *Settings -> Editor -> Code Style* page.    
