@@ -28,7 +28,7 @@
       <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
       <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
       <mat-error *ngIf="toDateControl.hasError('required')" id="toDateError">
-        <mat-icon fontSet="fa" fontIcon="exclamation-circle"></mat-icon> {{toDateRequiredMsg}}
+        <mat-icon fontSet="fa" fontIcon="fa-exclamation-circle"></mat-icon> {{toDateRequiredMsg}}
       </mat-error>
     </mat-form-field>
   </mat-card-content>
