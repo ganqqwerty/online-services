@@ -39,7 +39,6 @@ export class ButtonComponent implements OnInit {
   ngOnInit() {
     for (const attr of BUTTON_HOST_ATTRIBUTES) {
       if (this.hasHostAttributes(attr)) {
-        //(this.elementRef.nativeElement as HTMLElement).classList.add(attr);
         this.type = attr;
       }
     }
