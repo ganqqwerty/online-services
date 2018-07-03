@@ -2,24 +2,21 @@ import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
+const INITIAL_VALUE = '';
+
 @Component({
   selector: 'os-date-input',
   templateUrl: './date-input.component.html',
   styleUrls: ['./date-input.component.scss']
 })
 export class DateInputComponent {
-  @Input() toLabel = 'From';
-  @Input() fromLabel = 'To';
-  @Input() fromDateRequiredMsg = 'From date is required';
-  @Input() toDateRequiredMsg = 'To date is required';
-  @Output() fromDate = new EventEmitter<Date>();
-  @Output() toDate = new EventEmitter<Date>();
+  @Input() name ;
+  @Input() requiredMsg = 'Date is required';
+  @Output() date = new EventEmitter<Date>();
 
-  fromDateControl = new FormControl('', [ Validators.required ]);
-  toDateControl = new FormControl('', [ Validators.required ]);
+  dateControl = new FormControl(INITIAL_VALUE, [ Validators.required ]);
 
-  updateFromDate = (event) => this.update(this.fromDate, event);
-  updateToDate = (event) => this.update(this.toDate, event);
+  updateDate = (event) => this.update(this.date, event);
 
   private update = (emitter, event) => emitter.emit(event.value);
 }

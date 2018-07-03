@@ -4,12 +4,9 @@ export class DateInputShowcasePage {
 
   navigateTo = () => browser.get('/show-case/date-input');
 
-  enterFromDate = async (text) => element(by.id('fromDateInput')).sendKeys(text);
+  enterDate = async (text) => element(by.id('dateInput')).sendKeys(text);
 
-  enterToDate = async (text) => element(by.id('toDateInput')).sendKeys(text);
+  getDateLabel = () => element(by.id('dateLabel'));
 
-  getFromDateLabel = () => element(by.id('fromDateLabel'));
-
-  getToDateLabel = () => element(by.id('toDateLabel'));
 }
 

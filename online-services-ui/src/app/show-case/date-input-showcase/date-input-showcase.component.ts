@@ -5,14 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './date-input-showcase.component.html'
 })
 export class DateInputShowcaseComponent {
-  fromDate: string;
-  toDate: string;
+  date: string;
 
-  updateFromDate(event) {
-    this.fromDate = event.toDateString();
-  }
-
-  updateToDate(event) {
-    this.toDate = event.toDateString();
+  updateDate(event) {
+    this.date = event.toDateString();
   }
 }

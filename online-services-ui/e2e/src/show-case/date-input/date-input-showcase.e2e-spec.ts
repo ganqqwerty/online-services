@@ -11,33 +11,17 @@ describe('date-input showcase page', () => {
   });
 
   it('should display "From" date if input of "From" field is a valid date', () => {
-    page.enterFromDate(DATE);
+    page.enterDate(DATE);
 
-    expect(page.getFromDateLabel()
-      .getText())
-      .toEqual(DATE);
-  });
-
-  it('should display "To" date if input of "To" field is a valid date', () => {
-    page.enterToDate(DATE);
-
-    expect(page.getToDateLabel()
+    expect(page.getDateLabel()
       .getText())
       .toEqual(DATE);
   });
 
   it('should display any error if input of "From" field is NOT a valid date', () => {
-    page.enterFromDate('i bum cyck cyck');
+    page.enterDate('i bum cyck cyck');
 
-    expect(page.getFromDateLabel()
-      .getText())
-      .toBe('');
-  });
-
-  it('should display any error if input of "To" field is NOT a valid date', () => {
-    page.enterToDate('i tra la la');
-
-    expect(page.getToDateLabel()
+    expect(page.getDateLabel()
       .getText())
       .toBe('');
   });

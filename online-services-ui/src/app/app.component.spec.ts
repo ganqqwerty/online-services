@@ -16,7 +16,7 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule.withRoutes,
+        RouterTestingModule,
         ShowCaseRoutingModule,
         ShowCaseModule,
         BrowserAnimationsModule],

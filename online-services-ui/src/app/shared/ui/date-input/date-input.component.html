@@ -1,35 +1,17 @@
 <mat-form-field color="accent">
-  <mat-label>{{fromLabel}}</mat-label>
+  <mat-label>{{name}}</mat-label>
   <input
     matInput
-    [formControl]="fromDateControl"
-    [matDatepicker]="fromDatePicker"
-    (dateInput)="updateFromDate($event)"
-    id="fromDateInput">
-  <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
-  <mat-datepicker #fromDatePicker></mat-datepicker>
-  <mat-error *ngIf="fromDateControl.hasError('required')" id="fromDateError">
+    [formControl]="dateControl"
+    [matDatepicker]="datePicker"
+    (dateInput)="updateDate($event)"
+    id="dateInput">
+  <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+  <mat-datepicker #datePicker></mat-datepicker>
+  <mat-error *ngIf="dateControl.hasError('required')" id="dateError">
     <mat-label>
       <mat-icon fontSet="fa" fontIcon="fa-exclamation-circle"></mat-icon>
-      {{fromDateRequiredMsg}}
+      {{requiredMsg}}
     </mat-label>
   </mat-error>
 </mat-form-field>
-
-<mat-form-field color="accent">
-  <mat-label>{{toLabel}}</mat-label>
-  <input
-    matInput
-    [formControl]="toDateControl"
-    [matDatepicker]="toDatePicker"
-    (dateInput)="updateToDate($event)"
-    id="toDateInput">
-  <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
-  <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
-  <mat-error *ngIf="toDateControl.hasError('required')" id="toDateError">
-    <mat-icon fontSet="fa" fontIcon="fa-exclamation-circle"></mat-icon>
-    {{toDateRequiredMsg}}
-  </mat-error>
-</mat-form-field>
-
-

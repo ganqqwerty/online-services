@@ -30,24 +30,15 @@ describe('DateInputComponent', () => {
       .toBeTruthy();
   });
 
-  it('should updateFromDate emit a date', () => {
-    shouldUpdateDateComponent(component.fromDate, component.updateFromDate);
+  it('should updateDate emit a date', () => {
+    component.date.subscribe((value) => expect(value).toBe(DATE));
+
+    component.updateDate(createEvent(DATE));
   });
-
-  it('should updateToDate emit a date', () => {
-    shouldUpdateDateComponent(component.toDate, component.updateToDate);
-  });
-
-  function shouldUpdateDateComponent(eventEmitter: EventEmitter<Date>, updateDateFn: (date: MatDatepickerInputEvent<Date>) => void) {
-    eventEmitter.subscribe((value) => expect(value).toBe(DATE));
-
-    updateDateFn(createEvent(DATE));
-  }
 
   function createEvent(date) {
     const event = new MatDatepickerInputEvent<Date>({} as MatDatepickerInput<Date>, {} as HTMLElement);
     event.value = date;
     return event;
   }
-
 });
