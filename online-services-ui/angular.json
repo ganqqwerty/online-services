@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.scss",
               "src/os-theme.scss",
-              "src/os-typography.scss"
+              "src/os-typography.scss",
+              "../node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": []
           },
