@@ -1,21 +1,16 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { throwIfAlreadyLoaded } from './module-import-guard';
-import { SideNavigationComponent } from '../show-case/side-navigation/side-navigation.component';
-import { MatListModule, MatSidenavModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
-import { UiModule } from '../shared/ui/ui.module';
 
 
 @NgModule({
-  declarations: [
-  SideNavigationComponent],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild([]),
   ],
   exports: [
-    SideNavigationComponent
   ],
   providers: [
 
