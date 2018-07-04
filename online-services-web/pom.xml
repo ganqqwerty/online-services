@@ -10,7 +10,7 @@
     <parent>
         <groupId>ch.admin.seco</groupId>
         <artifactId>online-services-parent</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.0-SNAPSHOT</version>
     </parent>
 
     <properties>
