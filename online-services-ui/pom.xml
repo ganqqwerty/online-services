@@ -53,6 +53,19 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>ng-lint</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <executable>node_modules/@angular/cli/bin/ng</executable>
+                            <arguments>
+                                <argument>lint</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>ng-build</id>
                         <phase>compile</phase>
                         <goals>
